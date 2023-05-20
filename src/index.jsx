@@ -1,45 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
-const AgeField = () => {
-  const [age, setAge] = useState();
-
-  return (
-    <label>
-      Zadej svůj věk {age}:
-      <input
-        type="text"
-        value={age}
-        onChange={(e) => { setAge(e.target.value)}}
-      />
-    </label>
-  );
-}
-
-const Checkbox = () => {
-  const [agreement, setAgreement] = useState(false);
-
-  return (
-    <label>
-      Souhlasíš se vším {agreement ? 'ano' : 'ne'}:
-      <input
-        type="checkbox"
-        checked={agreement}
-        onChange={(e) => {setAgreement(e.target.checked)}}
-      />
-    </label>
-  );
-}
-
-
+import FormInputs from './components/FormInputs';
+import Effects from './components/Effects';
 
 const App = () => {
   return (
     <div className="container">
 
-      <AgeField />
-      <Checkbox />
+      <Effects />
+
+
 
     </div>
   );
