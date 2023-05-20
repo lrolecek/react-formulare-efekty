@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 
-
 const Effects = () => {
 
 	const [month, setMonth] = useState('01');
